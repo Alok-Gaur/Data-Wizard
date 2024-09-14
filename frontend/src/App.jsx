@@ -1,10 +1,17 @@
-function App() {
+import Header from "./components/Header";
+import SideBar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
+import "./App.css";
+
+function App() {
   return (
     <>
-      <h1>Data Wizard</h1>
+      <SideBar></SideBar>
+      <Header></Header>
+      <Footer></Footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
