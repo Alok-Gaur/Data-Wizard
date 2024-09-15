@@ -1,15 +1,22 @@
 import Header from "./components/Header";
-import SideBar from "./components/Sidebar";
-import Footer from "./components/Footer";
-
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import Resume from "./components/Resume";
+import Posts from "./components/Posts";
 
 function App() {
   return (
     <>
-      <SideBar></SideBar>
-      <Header></Header>
-      <Footer></Footer>
+      <div className="containerApp">
+        
+
+        <div className="contentList">
+          <Header></Header>
+          <Resume></Resume>
+          <Posts></Posts>
+          
+        </div>
+      </div>
     </>
   );
 }
