@@ -8,13 +8,10 @@ function App() {
   return (
     <>
       <div className="containerApp">
-        
-
         <div className="contentList">
-          <Header></Header>
-          <Resume></Resume>
-          <Posts></Posts>
-          
+          <Header />
+          <Resume />
+          <Posts />
         </div>
       </div>
     </>
