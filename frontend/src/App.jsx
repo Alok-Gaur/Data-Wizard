@@ -13,7 +13,7 @@ import ProfileSummary from "./components/createResume/ProfileSummary";
 function App() {
   return (
     <>
-      <h1>Data Wizard</h1>
+      
       {/* Use BrowserRouter instead of Router */}
       <BrowserRouter>
         <Header />
