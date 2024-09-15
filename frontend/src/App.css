@@ -1,0 +1,130 @@
+body {
+  background-color: #eae9e9;
+}
+
+.containerApp {
+  display: flex;
+}
+
+.contentList {
+  width: 100%;
+}
+
+.sideBar {
+  min-height: 100vh;
+  background-color: #eae9e957 !important;
+}
+
+.resume-container {
+  width: 100%;
+  height: 360px;
+  background-color: white;
+  display: flex;
+}
+
+.resume{
+    width: 60%;
+    padding: 59px 90px;
+}
+.resumeButton {
+  float: left;
+    margin-top: 75px;
+    margin-left: 6px;
+  background-color: #6262ff;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  width: 146px;
+}
+.resume-img{
+    width: 35%;
+    
+    
+}
+.resumeimg{
+    width: 88%;
+}
+.mainHeader {
+  background: white !important;
+}
+.textHeader {
+  color: #4c4e4e;
+  font-weight: 500;
+  background: none !important;
+}
+.sign-up {
+  background-color: #3e3eff !important;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  width: 89px;
+  padding: 8px 0;
+}
+
+.login {
+  border: 1px solid #3e3eff;
+  color: #3e3eff;
+  border-radius: 20px;
+  margin-right: 20px !important;
+  padding: 8px 0;
+  width: 73px;
+}
+
+.login :hover {
+    color: white !important;
+    background-color: #3e3eff !important;
+    /* transition: 1s !important; */
+}
+
+.search-bar {
+  background-color: #f4f4f4;
+  border-radius: 22px;
+}
+
+.Search {
+  width: 300px;
+  display: flex;
+}
+
+.search-icon {
+  background-color: black;
+}
+
+.textSidebar {
+  color: #727272;
+}
+
+.app-name {
+  margin: 10px;
+  font-size: 20px;
+  color: #535151;
+}
+
+.resume-heading {
+  color: black;
+}
+
+.list-items {
+  margin-left: 155px;
+}
+
+.list-items :hover {
+  color: #3e3eff;
+}
+
+.list-item-active {
+  color: #3e3eff;
+}
+
+.logo {
+  color: black;
+  font-size: 24px;
+}
+
+.post-title{
+    font-weight: 700;
+    text-align: center;
+    margin-top: 25px;
+}
