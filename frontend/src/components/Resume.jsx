@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import image from "../assets/resume.jpg";
 
 import { Box } from "@mui/material";
@@ -11,9 +12,9 @@ const Resume = () => {
             <h1 className="resume-heading">
               Build Your Resume With Our Specialized AI(Image)
             </h1>
-            <a href="basic-details">
+            <Link to="/basic-details">
               <button className="resumeButton">Create Resume</button>
-            </a>
+            </Link>
           </div>
 
           <div className="resume-img" style={{ marginTop: "1px" }}>
