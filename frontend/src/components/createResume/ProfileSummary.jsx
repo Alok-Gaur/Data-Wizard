@@ -8,6 +8,7 @@ const ProfileSummary = () => {
     const [submittedData, setSubmittedData] = useState(''); 
 
     
+    
     const submit = (data) => {
         setSubmittedData(data.content); 
     };
