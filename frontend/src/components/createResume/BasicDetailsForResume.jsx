@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
-import { useNavigate, Link} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Box, TextField, Button } from '@mui/material';
+import { useDispatch, useSelector } from "react-redux"
+import { addUserDetails } from '../../store/resume/resumeSlice';
 
 const BasicDetailsForResume = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch()
+    const userData = useSelector((state) => state.user.basicDetails);
 
     const [basicDetails, setBasicDetails] = useState({
         name: '',
@@ -23,12 +27,11 @@ const BasicDetailsForResume = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(basicDetails);
+        await dispatch(addUserDetails(basicDetails))
         navigate('/education-details')
     };
-    
 
     return (
         <Box
