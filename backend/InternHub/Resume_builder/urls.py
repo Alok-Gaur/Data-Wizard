@@ -3,6 +3,8 @@ from . import views
 from rest_framework.schemas import get_schema_view
 
 urlpatterns = [
-    path('get-resume/<int:num>', views.get_resume), 
-    path('create-resume/<int:num>', views.create_resume)
+    path('get-resume/<int:id>', views.get_resume), 
+    path('create-resume/', views.create_resume), 
+    path('update-resume/<int:id>', views.update_resume),
+    path('delete-resume/<int:id>', views.delete_resume)
 ]

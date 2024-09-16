@@ -10,8 +10,8 @@ import json
 # Create your views here.
 
 @api_view(['GET'])
-def get_resume(request, num):
-    resume_obj = ResumeModel.objects.filter(id=num).first()
+def get_resume(request, id):
+    resume_obj = ResumeModel.objects.filter(id=id).first()
     if not resume_obj:
         return Response('No data found!', status=status.HTTP_404_NOT_FOUND)
     serializer = ResumeSerializer(resume_obj)
@@ -20,7 +20,7 @@ def get_resume(request, num):
 
 
 @api_view(['POST'])
-def create_resume(request, num):
+def create_resume(request):
     data = ResumeSerializer(data=request.data)
     if data.is_valid():
         data.save()
@@ -31,8 +31,8 @@ def create_resume(request, num):
 
 
 @api_view(['PUT'])
-def update_resume(request, num):
-    check = ResumeModel.objects.check(id=num)
+def update_resume(request, id):
+    check = ResumeModel.objects.check(id=id)
     if check:
         data = ResumeSerializer(data=request.data)
         if data.is_valid():
@@ -45,10 +45,10 @@ def update_resume(request, num):
 
 
 @api_view(['DELETE'])
-def delete_resume(request, num):
-    check = ResumeModel.objects.check(id=num)
+def delete_resume(request, id):
+    check = ResumeModel.objects.check(id=id)
     if check:
-        ResumeModel.objects.filter(id=num).delete()
+        ResumeModel.objects.filter(id=id).delete()
         return Response("Deleted Successfully!", status.HTTP_200_OK)
     else:
         return Response("Data Not Found!", status.HTTP_404_NOT_FOUND)
