@@ -9,10 +9,12 @@ import BasicDetailsForResume from "./components/createResume/BasicDetailsForResu
 import EducationDetails from "./components/createResume/EducationDetails";
 import Skills from "./components/createResume/Skills";
 import ProfileSummary from "./components/createResume/ProfileSummary";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       
       {/* Use BrowserRouter instead of Router */}
       <BrowserRouter>
@@ -32,7 +34,7 @@ function App() {
         <Outlet />
       </main>
       <Footer /> */}
-    </>
+    </Provider>
   );
 }
 
