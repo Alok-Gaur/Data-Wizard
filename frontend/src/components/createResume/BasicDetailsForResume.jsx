@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, TextField, Button } from '@mui/material';
@@ -8,7 +7,7 @@ import { addUserDetails } from '../../store/resume/resumeSlice';
 const BasicDetailsForResume = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch()
-    const userData = useSelector((state) => state.user.basicDetails);
+    // const userData = useSelector((state) => state.user.basicDetails);
 
   const [basicDetails, setBasicDetails] = useState({
     name: "",
