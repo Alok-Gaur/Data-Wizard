@@ -1,9 +1,12 @@
 import React, { useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, TextField, Box } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { addUserSkills } from '../../store/resume/resumeSlice';
 
 const Skills = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch()
     const [input, setInput] = useState('')
     const [skills, setSkills] = useState([]);
 
@@ -18,9 +21,9 @@ const Skills = () => {
 
     // console.log(skills)
 
-    useEffect(() => {
-        console.log(skills)
-    }, [skills])
+    // useEffect(() => {
+    //     console.log(skills)
+    // }, [skills])
 
     return (
         <>
@@ -38,7 +41,9 @@ const Skills = () => {
                     ))}
                 </Box>
             </Box>
-            <Button onClick={()=>navigate('/profile-summary')}>Next</Button>
+            <Button onClick={()=>{
+                dispatch(addUserSkills(skills))
+                navigate('/profile-summary')}}>Next</Button>
         </>
     );
 }
