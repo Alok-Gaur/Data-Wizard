@@ -1,17 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 import { Controller, useForm } from 'react-hook-form';
 import { Box, Button } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { addUserProfile } from '../../store/resume/resumeSlice';
+import axios from "axios"
 
 const ProfileSummary = () => {
+    const userData = useSelector((state) => state.user);
+    const dispatch = useDispatch()
     const { handleSubmit, control } = useForm();
-    const [submittedData, setSubmittedData] = useState(''); 
+    const [submittedData, setSubmittedData] = useState('');     
+    
 
-    
-    
-    const submit = (data) => {
-        setSubmittedData(data.content); 
+    const postProfileSummary = async (updatedData) => {
+        try {
+            const response = await axios.post('http://localhost:8000/resume/create-resume/', updatedData);
+            console.log("Profile summary posted successfully:", response.data);
+        } catch (error) {
+            console.error("Error posting profile summary:", error);
+        }
     };
+    
+    const submit = async (data) => {
+        setSubmittedData(data.content);    
+        dispatch(addUserProfile(data.content));
+    
+        postProfileSummary({
+            ...userData,
+            profileSummary: data.content  
+        });
+    
+        console.log("Updated user data:", userData);
+    };
+    
 
     return (
         <>
