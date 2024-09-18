@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Box, TextField, Button, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addUserEducation } from '../../store/resume/resumeSlice';
 
 const EducationDetails = () => {
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const [education, setEducation] = useState({
         schoolName: '',
@@ -23,7 +26,7 @@ const EducationDetails = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate('/skills')
-        console.log(education);
+        dispatch(addUserEducation(education))
     };
 
     return (<>
