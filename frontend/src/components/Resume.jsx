@@ -6,7 +6,7 @@ import { Box } from "@mui/material";
 const Resume = () => {
   return (
     <>
-      <Box display={"flex"} sx={{ bgcolor: "lightgray" }}>
+      {/* <Box display={"flex"} sx={{ bgcolor: "lightgray" }}> */}
         <div className="resume-container">
           <div className="resume">
             <h1 className="resume-heading">
@@ -21,7 +21,7 @@ const Resume = () => {
             <img src={image} alt="" className="resumeimg" />
           </div>
         </div>
-      </Box>
+      {/* </Box> */}
     </>
   );
 };

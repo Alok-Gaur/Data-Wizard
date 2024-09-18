@@ -1,9 +1,10 @@
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Resume from "./components/Resume";
+import ResumeTemplate from "./components/createResume/ResumeTemplate";
 import Posts from "./components/Posts";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BasicDetailsForResume from "./components/createResume/BasicDetailsForResume";
 import EducationDetails from "./components/createResume/EducationDetails";
@@ -15,8 +16,7 @@ import { store } from "./store/store";
 function App() {
   return (
     <Provider store={store}>
-      
-      {/* Use BrowserRouter instead of Router */}
+      {/* Use BrowserRouter instead of Router  */}
       <BrowserRouter>
         <Header />
         <Routes>
@@ -27,7 +27,7 @@ function App() {
           <Route path="/profile-summary" element={<ProfileSummary />} />
           <Route path="/posts" element={<Posts />} />
         </Routes>
-        <Footer />
+        {/* <ResumeTemplate></ResumeTemplate>*/}
       </BrowserRouter>
       {/* <Header />
       <main>
