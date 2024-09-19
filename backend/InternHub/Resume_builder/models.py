@@ -3,6 +3,12 @@ from django.db import models
 # Create your models here.
 class ResumeModel(models.Model):
     role = models.CharField(max_length=200, null=False)
+    name = models.CharField(max_len=200)
+    surname = models.CharField(max_length=100)
+    city = models.CharField(max_length=50)
+    country = models.CharField(max_length=50)
+    pincode = models.CharField(max_length=10)
+    
     phone = models.CharField(max_length=15)
     email = models.EmailField()
     linkedin = models.URLField()
