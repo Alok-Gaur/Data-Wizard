@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+} 
+
+.container {
+  background-color: rgb(235 235 235);
+}
+
+.resumeContainer {
+  margin: auto;
+  height: 11.69in;
+  width: 8.27in;
+  border: 1px solid rgb(183, 179, 179);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  background-color: white;
+  padding: 40px;
+}
+/* /2480 3508  */
+.resumeHeading {
+  text-align: center;
+  font-size: 32px;
+}
+
+.contactSection {
+  display: flex;
+  margin: 20px 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 0px;
+  column-gap: 2px;
+}
+
+.EdTime {
+  margin-top: 0px;
+  float: right;
+}
+.Education {
+  margin-bottom: 10px;
+}
+.internDetails {
+  margin-top: 5px;
+  width: 85%;
+  text-align: justify;
+}
+.internDetails ul {
+  margin-left: 20px;
+}
+.summary {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.Work {
+  margin-bottom: 10px;
+}
+
+.skillsName {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 6px;
+  padding: 0;
+  list-style: none;
+  line-height: 0;
+}
+.skillsName li {
+  padding: 13px;
+  margin: 0px 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.skills {
+  margin-bottom: 10px;
+}
+
+.Project {
+  margin-bottom: 10px;
+}
+
+.aList {
+  margin-left: 20px;
+}

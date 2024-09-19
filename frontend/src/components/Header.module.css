@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: white; /* White background */
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better aesthetics */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4c4a4a; /* You can change this color */
+  margin-left: 50px;
+}
+.logo1{
+    margin-right: 5px;
+}
+nav {
+  flex-grow: 1;
+  text-align: center;
+  margin-right: 225px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+ul li {
+  margin: 0 20px;
+  display: inline;
+}
+ul li a {
+  text-decoration: none;
+  color: #a9a9a9; /* Light grey shade */
+  font-size: 18px;
+}
+ul li a:hover {
+  color: #007bff; /* Blue on hover */
+}
+.authButtons {
+  display: flex;
+  align-items: center;
+}
+.authButtons button {
+  font-size: 16px;
+  padding: 10px 16px;
+  border-radius: 25px;
+  border: 2px solid #007bff; /* Blue border */
+  margin-left: 10px;
+  cursor: pointer;
+}
+.loginBtn {
+  background-color: white; /* White background */
+  color: #007bff; /* Blue text */
+}
+.loginBtn:hover {
+  background-color: #007bff; /* Blue on hover */
+  color: white; /* White text on hover */
+}
+.registerBtn {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+}
+.registerBtn:hover {
+  background-color: white; /* White on hover */
+  color: #007bff; /* Blue text on hover */
+}
