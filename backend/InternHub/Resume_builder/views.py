@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse
 from rest_framework.decorators import api_view, schema
 from rest_framework.response import Response
 from rest_framework import status
-from .models import ResumeModel
+from .models import Resume_model
 from .serializer import ResumeSerializer
 import json
 
@@ -11,7 +11,7 @@ import json
 
 @api_view(['GET'])
 def get_resume(request, id):
-    resume_obj = ResumeModel.objects.filter(id=id).first()
+    resume_obj = Resume_model.objects.filter(id=id).first()
     if not resume_obj:
         return Response('No data found!', status=status.HTTP_404_NOT_FOUND)
     serializer = ResumeSerializer(resume_obj)
@@ -32,7 +32,7 @@ def create_resume(request):
 
 @api_view(['PUT'])
 def update_resume(request, id):
-    check = ResumeModel.objects.check(id=id)
+    check = Resume_model.objects.check(id=id)
     if check:
         data = ResumeSerializer(data=request.data)
         if data.is_valid():
@@ -46,9 +46,9 @@ def update_resume(request, id):
 
 @api_view(['DELETE'])
 def delete_resume(request, id):
-    check = ResumeModel.objects.check(id=id)
+    check = Resume_model.objects.check(id=id)
     if check:
-        ResumeModel.objects.filter(id=id).delete()
+        Resume_model.objects.filter(id=id).delete()
         return Response("Deleted Successfully!", status.HTTP_200_OK)
     else:
         return Response("Data Not Found!", status.HTTP_404_NOT_FOUND)
